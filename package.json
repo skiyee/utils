@@ -1,0 +1,84 @@
+{
+  "name": "@skiyee/utils",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "a common ts/js utils",
+  "author": {
+    "name": "sKy",
+    "email": "319619193@qq.com"
+  },
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/skiyee/utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skiyee/utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skiyee/utils/issues"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "utils",
+    "common utils"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "type:check": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "npx lint --fix",
+    "test": "vitest",
+    "stub": "unbuild --stub",
+    "build": "unbuild",
+    "release": "pnpm test && pnpm build && bumpp",
+    "prepare": "simple-git-hooks"
+  },
+  "peerDependencies": {
+    "vue": "^2.0.0 || >=3.0.0"
+  },
+  "dependencies": {
+    "vue-demi": "^0.14.7"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.11.6",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "bumpp": "^9.4.0",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.9.1",
+    "eslint": "^8.57.0",
+    "lint-staged": "^15.2.2",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.4.3",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.4.0",
+    "vue": "^3.4.23"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "npx commitlint --edit ${1}"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint . --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}
