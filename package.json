@@ -1,7 +1,7 @@
 {
   "name": "@skiyee/utils",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "a common ts/js utils",
   "author": {
     "name": "sKy",
