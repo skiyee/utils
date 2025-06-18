@@ -1,19 +1,20 @@
 {
   "name": "@skiyee/utils",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a common ts/js utils",
   "author": {
     "name": "sKy",
     "email": "319619193@qq.com"
   },
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "homepage": "https://github.com/skiyee/utils#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skiyee/utils.git"
   },
   "bugs": {
+    "type": "git",
     "url": "https://github.com/skiyee/utils/issues"
   },
   "keywords": [

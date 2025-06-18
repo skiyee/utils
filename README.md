@@ -14,4 +14,4 @@ pnpm add @skiyee/utils
 
 ## ⚖️ 声明
 
-采用 [GPL-3.0](./LICENSE) 许可协议
+采用 [MIT](./LICENSE) 许可协议

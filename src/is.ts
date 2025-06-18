@@ -12,6 +12,7 @@ export function isString(value: any): value is string {
   return isDef(value) && typeof value === 'string'
 }
 
+// eslint-disable-next-line ts/no-unsafe-function-type
 export function isFn(value: any): value is Function {
   return isDef(value) && typeof value === 'function'
 }
